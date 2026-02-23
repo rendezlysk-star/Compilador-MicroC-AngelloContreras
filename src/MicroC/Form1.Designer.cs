@@ -103,6 +103,7 @@
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             salirToolStripMenuItem.Size = new Size(180, 22);
             salirToolStripMenuItem.Text = "Salir";
+            salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
             // editarToolStripMenuItem
             // 

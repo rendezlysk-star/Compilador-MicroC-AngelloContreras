@@ -20,7 +20,6 @@ namespace MicroC
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-
             openFileDialog.Filter = "Archivos de C (*.c)|*.c|Todos los archivos (*.*)|*.*";
             openFileDialog.Title = "Abrir código fuente";
 
@@ -59,15 +58,28 @@ namespace MicroC
                 {
                     rutaArchivoActual = saveFileDialog.FileName;
                     System.IO.File.WriteAllText(rutaArchivoActual, txtCodigo.Text);
-
                     this.Text = "MicroC - " + rutaArchivoActual;
                 }
             }
             else
             {
                 System.IO.File.WriteAllText(rutaArchivoActual, txtCodigo.Text);
-                CrownMessageBox.ShowInformation("Archivo guardado correctamente", "Guardar");
+                CrownMessageBox.ShowInformation("Archivo guardado correctamente", "Guardar", ReaLTaiizor.Enum.Crown.DialogButton.Close);
             }
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text.Length > 0)
+            {
+                DialogResult respuesta = CrownMessageBox.ShowWarning("¿Desea guardar los cambios en el archivo antes de salir?", "Salir de MicroC", ReaLTaiizor.Enum.Crown.DialogButton.YesNo);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    guardarToolStripMenuItem.PerformClick();
+                }
+            }
+            Application.Exit();
         }
     }
 }
