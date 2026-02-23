@@ -6,7 +6,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>C_Logo.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="C_Logo.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ReaLTaiizor" Version="3.8.1.5" />

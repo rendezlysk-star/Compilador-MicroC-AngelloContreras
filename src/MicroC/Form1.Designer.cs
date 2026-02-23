@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             crownMenuStrip1 = new ReaLTaiizor.Controls.CrownMenuStrip();
             archivoToolStripMenuItem = new ToolStripMenuItem();
             nuevoToolStripMenuItem = new ToolStripMenuItem();
@@ -74,7 +75,7 @@
             nuevoToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             nuevoToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            nuevoToolStripMenuItem.Size = new Size(116, 22);
+            nuevoToolStripMenuItem.Size = new Size(180, 22);
             nuevoToolStripMenuItem.Text = "Nuevo";
             nuevoToolStripMenuItem.Click += nuevoToolStripMenuItem_Click;
             // 
@@ -83,7 +84,7 @@
             abrirToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             abrirToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            abrirToolStripMenuItem.Size = new Size(116, 22);
+            abrirToolStripMenuItem.Size = new Size(180, 22);
             abrirToolStripMenuItem.Text = "Abrir";
             abrirToolStripMenuItem.Click += abrirToolStripMenuItem_Click;
             // 
@@ -92,7 +93,7 @@
             guardarToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             guardarToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            guardarToolStripMenuItem.Size = new Size(116, 22);
+            guardarToolStripMenuItem.Size = new Size(180, 22);
             guardarToolStripMenuItem.Text = "Guardar";
             guardarToolStripMenuItem.Click += guardarToolStripMenuItem_Click;
             // 
@@ -101,7 +102,7 @@
             salirToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             salirToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(116, 22);
+            salirToolStripMenuItem.Size = new Size(180, 22);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
@@ -146,7 +147,7 @@
             // 
             splitContainer1.Panel2.Controls.Add(txtConsola);
             splitContainer1.Size = new Size(800, 596);
-            splitContainer1.SplitterDistance = 266;
+            splitContainer1.SplitterDistance = 450;
             splitContainer1.TabIndex = 1;
             // 
             // txtCodigo
@@ -154,23 +155,26 @@
             txtCodigo.BackColor = Color.FromArgb(60, 63, 65);
             txtCodigo.BorderStyle = BorderStyle.FixedSingle;
             txtCodigo.Dock = DockStyle.Fill;
+            txtCodigo.Font = new Font("Cascadia Code", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCodigo.ForeColor = SystemColors.ControlLight;
             txtCodigo.Location = new Point(0, 0);
             txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(266, 596);
+            txtCodigo.Size = new Size(450, 596);
             txtCodigo.TabIndex = 0;
             txtCodigo.Text = "";
+            txtCodigo.TextChanged += txtCodigo_TextChanged;
             // 
             // txtConsola
             // 
             txtConsola.BackColor = Color.FromArgb(60, 63, 65);
             txtConsola.BorderStyle = BorderStyle.FixedSingle;
             txtConsola.Dock = DockStyle.Fill;
+            txtConsola.Font = new Font("Consolas", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtConsola.ForeColor = SystemColors.ControlLight;
             txtConsola.Location = new Point(0, 0);
             txtConsola.Name = "txtConsola";
             txtConsola.ReadOnly = true;
-            txtConsola.Size = new Size(530, 596);
+            txtConsola.Size = new Size(346, 596);
             txtConsola.TabIndex = 0;
             txtConsola.Text = "[Compilación en desarrollo]";
             // 
@@ -182,9 +186,10 @@
             Controls.Add(splitContainer1);
             Controls.Add(crownMenuStrip1);
             ForeColor = SystemColors.GrayText;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = crownMenuStrip1;
             Name = "Form1";
-            Text = "Form1";
+            Text = "MicroC";
             crownMenuStrip1.ResumeLayout(false);
             crownMenuStrip1.PerformLayout();
             splitContainer1.Panel1.ResumeLayout(false);

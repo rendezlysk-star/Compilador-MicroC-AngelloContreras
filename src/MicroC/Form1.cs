@@ -6,6 +6,7 @@ namespace MicroC
     public partial class Form1 : CrownForm
     {
         string rutaArchivoActual = "";
+        bool archivoModificado = false;
 
         public Form1()
         {
@@ -29,6 +30,7 @@ namespace MicroC
                 txtCodigo.ReadOnly = true;
                 rutaArchivoActual = openFileDialog.FileName;
                 this.Text = "MicroC - " + openFileDialog.FileName;
+                archivoModificado = false;
             }
         }
 
@@ -40,6 +42,7 @@ namespace MicroC
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             txtCodigo.Clear();
+            archivoModificado = false;
             txtCodigo.ReadOnly = false;
             this.Text = "MicroC - NuevoArch.c";
             txtConsola.Text = "[Compilación en desarrollo]";
@@ -58,6 +61,7 @@ namespace MicroC
                 {
                     rutaArchivoActual = saveFileDialog.FileName;
                     System.IO.File.WriteAllText(rutaArchivoActual, txtCodigo.Text);
+                    archivoModificado = false;
                     this.Text = "MicroC - " + rutaArchivoActual;
                 }
             }
@@ -70,7 +74,7 @@ namespace MicroC
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (txtCodigo.Text.Length > 0)
+            if (archivoModificado == true)
             {
                 DialogResult respuesta = CrownMessageBox.ShowWarning("¿Desea guardar los cambios en el archivo antes de salir?", "Salir de MicroC", ReaLTaiizor.Enum.Crown.DialogButton.YesNo);
 
@@ -90,6 +94,11 @@ namespace MicroC
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CrownMessageBox.ShowInformation("Función disponible en próximas actualizaciones!", "Ayuda", ReaLTaiizor.Enum.Crown.DialogButton.Ok);
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            archivoModificado = true;
         }
     }
 }
