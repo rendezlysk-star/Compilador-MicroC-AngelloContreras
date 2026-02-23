@@ -24,11 +24,22 @@ namespace MicroC
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 txtCodigo.Text = System.IO.File.ReadAllText(openFileDialog.FileName);
-
                 txtCodigo.ReadOnly = true;
-
                 this.Text = "MicroC - " + openFileDialog.SafeFileName;
             }
+        }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtCodigo.ReadOnly = false;
+        }
+
+        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtCodigo.Clear();
+            txtCodigo.ReadOnly = false;
+            this.Text = "MicroC - NuevoArch.c";
+            txtConsola.Text = "[Compilación en desarrollo]";
         }
     }
 }

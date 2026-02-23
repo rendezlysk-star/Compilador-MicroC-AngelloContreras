@@ -74,8 +74,9 @@
             nuevoToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             nuevoToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            nuevoToolStripMenuItem.Size = new Size(116, 22);
+            nuevoToolStripMenuItem.Size = new Size(180, 22);
             nuevoToolStripMenuItem.Text = "Nuevo";
+            nuevoToolStripMenuItem.Click += nuevoToolStripMenuItem_Click;
             // 
             // abrirToolStripMenuItem
             // 
@@ -91,7 +92,7 @@
             guardarToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             guardarToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            guardarToolStripMenuItem.Size = new Size(116, 22);
+            guardarToolStripMenuItem.Size = new Size(180, 22);
             guardarToolStripMenuItem.Text = "Guardar";
             // 
             // salirToolStripMenuItem
@@ -99,7 +100,7 @@
             salirToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             salirToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(116, 22);
+            salirToolStripMenuItem.Size = new Size(180, 22);
             salirToolStripMenuItem.Text = "Salir";
             // 
             // editarToolStripMenuItem
@@ -109,6 +110,7 @@
             editarToolStripMenuItem.Name = "editarToolStripMenuItem";
             editarToolStripMenuItem.Size = new Size(49, 20);
             editarToolStripMenuItem.Text = "Editar";
+            editarToolStripMenuItem.Click += editarToolStripMenuItem_Click;
             // 
             // compilarToolStripMenuItem
             // 
