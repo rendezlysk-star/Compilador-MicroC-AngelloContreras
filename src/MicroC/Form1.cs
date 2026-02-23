@@ -61,14 +61,15 @@ namespace MicroC
                 {
                     rutaArchivoActual = saveFileDialog.FileName;
                     System.IO.File.WriteAllText(rutaArchivoActual, txtCodigo.Text);
+                    this.Text = "Compilador MicroC - " + rutaArchivoActual;
                     archivoModificado = false;
-                    this.Text = "MicroC - " + rutaArchivoActual;
                 }
             }
             else
             {
                 System.IO.File.WriteAllText(rutaArchivoActual, txtCodigo.Text);
                 CrownMessageBox.ShowInformation("Archivo guardado correctamente", "Guardar", ReaLTaiizor.Enum.Crown.DialogButton.Close);
+                archivoModificado = false;
             }
         }
 

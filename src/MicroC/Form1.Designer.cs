@@ -56,7 +56,7 @@
             crownMenuStrip1.Location = new Point(0, 0);
             crownMenuStrip1.Name = "crownMenuStrip1";
             crownMenuStrip1.Padding = new Padding(3, 2, 0, 2);
-            crownMenuStrip1.Size = new Size(800, 24);
+            crownMenuStrip1.Size = new Size(1036, 24);
             crownMenuStrip1.TabIndex = 0;
             crownMenuStrip1.Text = "crownMenuStrip1";
             crownMenuStrip1.ItemClicked += crownMenuStrip1_ItemClicked;
@@ -75,7 +75,7 @@
             nuevoToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             nuevoToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            nuevoToolStripMenuItem.Size = new Size(180, 22);
+            nuevoToolStripMenuItem.Size = new Size(116, 22);
             nuevoToolStripMenuItem.Text = "Nuevo";
             nuevoToolStripMenuItem.Click += nuevoToolStripMenuItem_Click;
             // 
@@ -84,7 +84,7 @@
             abrirToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             abrirToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            abrirToolStripMenuItem.Size = new Size(180, 22);
+            abrirToolStripMenuItem.Size = new Size(116, 22);
             abrirToolStripMenuItem.Text = "Abrir";
             abrirToolStripMenuItem.Click += abrirToolStripMenuItem_Click;
             // 
@@ -93,7 +93,7 @@
             guardarToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             guardarToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            guardarToolStripMenuItem.Size = new Size(180, 22);
+            guardarToolStripMenuItem.Size = new Size(116, 22);
             guardarToolStripMenuItem.Text = "Guardar";
             guardarToolStripMenuItem.Click += guardarToolStripMenuItem_Click;
             // 
@@ -102,7 +102,7 @@
             salirToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             salirToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(180, 22);
+            salirToolStripMenuItem.Size = new Size(116, 22);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
@@ -146,8 +146,8 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(txtConsola);
-            splitContainer1.Size = new Size(800, 596);
-            splitContainer1.SplitterDistance = 450;
+            splitContainer1.Size = new Size(1036, 596);
+            splitContainer1.SplitterDistance = 645;
             splitContainer1.TabIndex = 1;
             // 
             // txtCodigo
@@ -159,7 +159,7 @@
             txtCodigo.ForeColor = SystemColors.ControlLight;
             txtCodigo.Location = new Point(0, 0);
             txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(450, 596);
+            txtCodigo.Size = new Size(645, 596);
             txtCodigo.TabIndex = 0;
             txtCodigo.Text = "";
             txtCodigo.TextChanged += txtCodigo_TextChanged;
@@ -174,7 +174,7 @@
             txtConsola.Location = new Point(0, 0);
             txtConsola.Name = "txtConsola";
             txtConsola.ReadOnly = true;
-            txtConsola.Size = new Size(346, 596);
+            txtConsola.Size = new Size(387, 596);
             txtConsola.TabIndex = 0;
             txtConsola.Text = "[Compilación en desarrollo]";
             // 
@@ -182,7 +182,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 620);
+            ClientSize = new Size(1036, 620);
             Controls.Add(splitContainer1);
             Controls.Add(crownMenuStrip1);
             ForeColor = SystemColors.GrayText;
