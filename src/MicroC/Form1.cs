@@ -13,5 +13,22 @@ namespace MicroC
         {
 
         }
+
+        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Filter = "Archivos de C (*.c)|*.c|Todos los archivos (*.*)|*.*";
+            openFileDialog.Title = "Abrir código fuente";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                txtCodigo.Text = System.IO.File.ReadAllText(openFileDialog.FileName);
+
+                txtCodigo.ReadOnly = true;
+
+                this.Text = "MicroC - " + openFileDialog.SafeFileName;
+            }
+        }
     }
 }

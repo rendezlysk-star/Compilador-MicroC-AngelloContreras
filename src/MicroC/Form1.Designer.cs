@@ -38,10 +38,12 @@
             compilarToolStripMenuItem = new ToolStripMenuItem();
             ayudaToolStripMenuItem = new ToolStripMenuItem();
             splitContainer1 = new SplitContainer();
-            richTextBox1 = new RichTextBox();
+            txtCodigo = new RichTextBox();
+            txtConsola = new RichTextBox();
             crownMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             SuspendLayout();
             // 
@@ -80,8 +82,9 @@
             abrirToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             abrirToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            abrirToolStripMenuItem.Size = new Size(116, 22);
+            abrirToolStripMenuItem.Size = new Size(180, 22);
             abrirToolStripMenuItem.Text = "Abrir";
+            abrirToolStripMenuItem.Click += abrirToolStripMenuItem_Click;
             // 
             // guardarToolStripMenuItem
             // 
@@ -131,22 +134,39 @@
             // 
             // splitContainer1.Panel1
             // 
-            splitContainer1.Panel1.Controls.Add(richTextBox1);
+            splitContainer1.Panel1.Controls.Add(txtCodigo);
+            // 
+            // splitContainer1.Panel2
+            // 
+            splitContainer1.Panel2.Controls.Add(txtConsola);
             splitContainer1.Size = new Size(800, 596);
             splitContainer1.SplitterDistance = 266;
             splitContainer1.TabIndex = 1;
             // 
-            // richTextBox1
+            // txtCodigo
             // 
-            richTextBox1.BackColor = Color.FromArgb(60, 63, 65);
-            richTextBox1.BorderStyle = BorderStyle.FixedSingle;
-            richTextBox1.Dock = DockStyle.Fill;
-            richTextBox1.ForeColor = SystemColors.ControlLight;
-            richTextBox1.Location = new Point(0, 0);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(266, 596);
-            richTextBox1.TabIndex = 0;
-            richTextBox1.Text = "";
+            txtCodigo.BackColor = Color.FromArgb(60, 63, 65);
+            txtCodigo.BorderStyle = BorderStyle.FixedSingle;
+            txtCodigo.Dock = DockStyle.Fill;
+            txtCodigo.ForeColor = SystemColors.ControlLight;
+            txtCodigo.Location = new Point(0, 0);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(266, 596);
+            txtCodigo.TabIndex = 0;
+            txtCodigo.Text = "";
+            // 
+            // txtConsola
+            // 
+            txtConsola.BackColor = Color.FromArgb(60, 63, 65);
+            txtConsola.BorderStyle = BorderStyle.FixedSingle;
+            txtConsola.Dock = DockStyle.Fill;
+            txtConsola.ForeColor = SystemColors.ControlLight;
+            txtConsola.Location = new Point(0, 0);
+            txtConsola.Name = "txtConsola";
+            txtConsola.ReadOnly = true;
+            txtConsola.Size = new Size(530, 596);
+            txtConsola.TabIndex = 0;
+            txtConsola.Text = "[Compilación en desarrollo]";
             // 
             // Form1
             // 
@@ -155,12 +175,14 @@
             ClientSize = new Size(800, 620);
             Controls.Add(splitContainer1);
             Controls.Add(crownMenuStrip1);
+            ForeColor = SystemColors.GrayText;
             MainMenuStrip = crownMenuStrip1;
             Name = "Form1";
             Text = "Form1";
             crownMenuStrip1.ResumeLayout(false);
             crownMenuStrip1.PerformLayout();
             splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
             ResumeLayout(false);
@@ -179,6 +201,7 @@
         private ToolStripMenuItem compilarToolStripMenuItem;
         private ToolStripMenuItem ayudaToolStripMenuItem;
         private SplitContainer splitContainer1;
-        private RichTextBox richTextBox1;
+        private RichTextBox txtCodigo;
+        private RichTextBox txtConsola;
     }
 }
