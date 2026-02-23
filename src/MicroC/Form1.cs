@@ -81,5 +81,15 @@ namespace MicroC
             }
             Application.Exit();
         }
+
+        private void compilarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CrownMessageBox.ShowInformation("Función disponible en próximas actualizaciones!", "Compilar", ReaLTaiizor.Enum.Crown.DialogButton.Ok);
+        }
+
+        private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CrownMessageBox.ShowInformation("Función disponible en próximas actualizaciones!", "Ayuda", ReaLTaiizor.Enum.Crown.DialogButton.Ok);
+        }
     }
 }

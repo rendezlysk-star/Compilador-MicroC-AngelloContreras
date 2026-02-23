@@ -74,7 +74,7 @@
             nuevoToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             nuevoToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            nuevoToolStripMenuItem.Size = new Size(180, 22);
+            nuevoToolStripMenuItem.Size = new Size(116, 22);
             nuevoToolStripMenuItem.Text = "Nuevo";
             nuevoToolStripMenuItem.Click += nuevoToolStripMenuItem_Click;
             // 
@@ -83,7 +83,7 @@
             abrirToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             abrirToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            abrirToolStripMenuItem.Size = new Size(180, 22);
+            abrirToolStripMenuItem.Size = new Size(116, 22);
             abrirToolStripMenuItem.Text = "Abrir";
             abrirToolStripMenuItem.Click += abrirToolStripMenuItem_Click;
             // 
@@ -92,7 +92,7 @@
             guardarToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             guardarToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            guardarToolStripMenuItem.Size = new Size(180, 22);
+            guardarToolStripMenuItem.Size = new Size(116, 22);
             guardarToolStripMenuItem.Text = "Guardar";
             guardarToolStripMenuItem.Click += guardarToolStripMenuItem_Click;
             // 
@@ -101,7 +101,7 @@
             salirToolStripMenuItem.BackColor = Color.FromArgb(60, 63, 65);
             salirToolStripMenuItem.ForeColor = Color.FromArgb(220, 220, 220);
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(180, 22);
+            salirToolStripMenuItem.Size = new Size(116, 22);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
@@ -121,6 +121,7 @@
             compilarToolStripMenuItem.Name = "compilarToolStripMenuItem";
             compilarToolStripMenuItem.Size = new Size(68, 20);
             compilarToolStripMenuItem.Text = "Compilar";
+            compilarToolStripMenuItem.Click += compilarToolStripMenuItem_Click;
             // 
             // ayudaToolStripMenuItem
             // 
@@ -129,6 +130,7 @@
             ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             ayudaToolStripMenuItem.Size = new Size(53, 20);
             ayudaToolStripMenuItem.Text = "Ayuda";
+            ayudaToolStripMenuItem.Click += ayudaToolStripMenuItem_Click;
             // 
             // splitContainer1
             // 
