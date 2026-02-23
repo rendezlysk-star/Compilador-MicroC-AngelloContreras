@@ -1,9 +1,12 @@
+using ReaLTaiizor.Controls;
 using ReaLTaiizor.Forms;
 
 namespace MicroC
 {
     public partial class Form1 : CrownForm
     {
+        string rutaArchivoActual = "";
+
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +28,8 @@ namespace MicroC
             {
                 txtCodigo.Text = System.IO.File.ReadAllText(openFileDialog.FileName);
                 txtCodigo.ReadOnly = true;
-                this.Text = "MicroC - " + openFileDialog.SafeFileName;
+                rutaArchivoActual = openFileDialog.FileName;
+                this.Text = "MicroC - " + openFileDialog.FileName;
             }
         }
 
@@ -40,6 +44,30 @@ namespace MicroC
             txtCodigo.ReadOnly = false;
             this.Text = "MicroC - NuevoArch.c";
             txtConsola.Text = "[Compilación en desarrollo]";
+            rutaArchivoActual = "";
+        }
+
+        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (rutaArchivoActual == "")
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Archivos de C (*.c)|*.c|Todos los archivos (*.*)|*.*";
+                saveFileDialog.Title = "Guardar código fuente";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    rutaArchivoActual = saveFileDialog.FileName;
+                    System.IO.File.WriteAllText(rutaArchivoActual, txtCodigo.Text);
+
+                    this.Text = "MicroC - " + rutaArchivoActual;
+                }
+            }
+            else
+            {
+                System.IO.File.WriteAllText(rutaArchivoActual, txtCodigo.Text);
+                CrownMessageBox.ShowInformation("Archivo guardado correctamente", "Guardar");
+            }
         }
     }
 }

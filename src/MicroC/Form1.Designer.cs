@@ -94,6 +94,7 @@
             guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
             guardarToolStripMenuItem.Size = new Size(180, 22);
             guardarToolStripMenuItem.Text = "Guardar";
+            guardarToolStripMenuItem.Click += guardarToolStripMenuItem_Click;
             // 
             // salirToolStripMenuItem
             // 
